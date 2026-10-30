@@ -6,7 +6,7 @@ import useTictactoe from './hooks/useTictactoe'
     return (
       <>
         <div className='game'>
-          <button onClick={resetGame}>new game</button>
+          <button onClick={resetGame}><img src="https://img.icons8.com/?size=100&id=3150&format=png&color=000000" alt="" /></button>
           <div className='status'>
             {getStatusMessage()}
           </div>

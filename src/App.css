@@ -80,3 +80,23 @@ body {
   color: #f43f5e;
   text-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
 }
+
+.game>button:first-of-type {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.game>button:first-of-type:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Petit effet au survol */
+}
+
+/* Ajuster la taille de l'icône */
+.game>button:first-of-type img {
+  width: 24px;
+  height: 24px;
+}

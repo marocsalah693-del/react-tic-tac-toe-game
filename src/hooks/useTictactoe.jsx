@@ -38,13 +38,15 @@ const useTictactoe = () => {
     }
     const getStatusMessage = () => {
         const winner = calculateWinner()
-        if ( !winner && isXNext ) {
-            return 'it\'s time off X'
-        } else if (!isXNext || !winner) {
-            return 'it\'s time off O'
-        } else {
+        
+        if(winner){
             return `the winner is ${winner}`
         }
+        if (board.every((cell)=>cell !== null)){
+            return 'it\'s a draw '
+        }
+        
+       return isXNext ? 'it\'s X turn ' : 'it\s O turn'
     }
 
     return { board, resetGame, isXNext, handleClick, calculateWinner, getStatusMessage, winner }
