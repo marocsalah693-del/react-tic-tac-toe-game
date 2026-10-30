@@ -69,19 +69,34 @@ body {
   transform: translateY(-2px);
 }
 
-/* Style pour X */
+/* Style pour X (Bleu néon + Animation pop) */
 .cell.x {
   color: #38bdf8;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+  animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-/* Style pour O */
+/* Style pour O (Rose vif + Animation pop) */
 .cell.o {
   color: #f43f5e;
-  text-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
+  text-shadow: 0 0 15px rgba(244, 63, 94, 0.8);
+  animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-.game>button:first-of-type {
+/* Animation fluide d'apparition */
+@keyframes popIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- Bouton de réinitialisation --- */
+.game > button:first-of-type {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -90,13 +105,11 @@ body {
   transition: background 0.2s;
 }
 
-.game>button:first-of-type:hover {
+.game > button:first-of-type:hover {
   background: rgba(255, 255, 255, 0.1);
-  /* Petit effet au survol */
 }
 
-/* Ajuster la taille de l'icône */
-.game>button:first-of-type img {
+.game > button:first-of-type img {
   width: 24px;
   height: 24px;
 }

@@ -14,7 +14,7 @@ import useTictactoe from './hooks/useTictactoe'
             {
               board.map((val,index)=>{
                 return <button 
-                className='cell' 
+                className={`cell ${val === 'X' ? 'x' : val === 'O' ? 'o' : ''}`}
                 key={index} 
                 onClick={()=>handleClick(index)}>
                   {val}
